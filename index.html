@@ -15,105 +15,157 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main" id="main">
-      <div class="mobile-section">
-        <img src="images/shaw-logo.png" alt="" class="logo" id="logo" />
-        <div class="menu-icon">
-          <i class="ri-menu-fill"></i>
-        </div>
-      </div>
-      <header>
-        <div class="navbar">
-          <div class="search">
-            <div class="search-items">
-              <select name="date" id="date">
-                <option>Today, 3 July 2023</option>
-                <option>Tue, 4 July 2023</option>
-                <option>Wed, 5 July 2023</option>
-                <option>Thur, 6 July 2023</option>
-              </select>
-              <select name="movie" id="movie">
-                <option value="">Select Movie</option>
-              </select>
-              <select name="theatre" id="theatre">
-                <option value="">Select Theatre</option>
-              </select>
+    <div class="container">
+      <div class="main-content">
+        <div class="main" id="main">
+          <div class="mobile-section">
+            <img src="images/shaw-logo.png" alt="" class="logo" id="logo" />
+            <div class="menu-icon">
+              <i class="ri-menu-fill"></i>
             </div>
-            <button>
-              <i class="ri-search-eye-fill"></i>
-              <!-- <p>Showtimes</p> -->
-            </button>
           </div>
-        </div>
-      </header>
+          <header>
+            <div class="navbar">
+              <div class="search">
+                <div class="search-items">
+                  <select name="date" id="date">
+                    <option>Today, 3 July 2023</option>
+                    <option>Tue, 4 July 2023</option>
+                    <option>Wed, 5 July 2023</option>
+                    <option>Thur, 6 July 2023</option>
+                  </select>
+                  <select name="movie" id="movie">
+                    <option value="">Select Movie</option>
+                  </select>
+                  <select name="theatre" id="theatre">
+                    <option value="">Select Theatre</option>
+                  </select>
+                </div>
+                <button>
+                  <i class="ri-search-eye-fill"></i>
+                  <!-- <p>Showtimes</p> -->
+                </button>
+              </div>
+            </div>
+          </header>
 
-      <div class="main-banner">
-        <div class="owl-carousel owl-theme" id="start">
-          <div><img src="images/01.png" alt="" /></div>
-          <div><img src="images/03.png" alt="" /></div>
-          <div><img src="images/04.png" alt="" /></div>
-          <div><img src="images/02.png" alt="" /></div>
-          <div><img src="images/05.png" alt="" /></div>
+          <div class="main-banner">
+            <div class="banner">
+              <div class="owl-carousel owl-theme" id="start">
+                <div><img src="images/01.png" alt="" /></div>
+                <div><img src="images/03.png" alt="" /></div>
+                <div><img src="images/04.png" alt="" /></div>
+                <div><img src="images/02.png" alt="" /></div>
+                <div><img src="images/05.png" alt="" /></div>
+              </div>
+            </div>
+
+            <div class="imax-ad">
+              <div><img src="images/imax-ad.webp" alt="" /></div>
+            </div>
+          </div>
+
+          <div class="movie-display">
+            <div class="main-display">
+              <div class="display-tab">
+                <ul class="nav-list">
+                  <li data-target="nowShowing" class="active-tab cat-list">
+                    Now Showing
+                  </li>
+                  <li data-target="advancedSale" class="cat-list">
+                    Advanaced Sales
+                  </li>
+                  <li data-target="comingSoon" class="cat-list">Coming Soon</li>
+                </ul>
+              </div>
+
+              <div class="carousel-container">
+                <div
+                  class="owl-carousel owl-theme active"
+                  id="nowShowing"
+                ></div>
+                <div class="owl-carousel owl-theme" id="advancedSale"></div>
+                <div class="owl-carousel owl-theme" id="comingSoon"></div>
+              </div>
+            </div>
+
+            <div class="secondary-display">
+              <div class="display-tab">
+                <ul class="nav-list">
+                  <li class="active-tab cat-list">Promotions</li>
+                </ul>
+              </div>
+
+              <div class="carousel-container">
+                <div
+                  class="owl-carousel owl-theme active"
+                  id="promotions"
+                ></div>
+              </div>
+            </div>
+
+            <div class="secondary-display">
+              <div class="display-tab">
+                <ul class="nav-list">
+                  <li class="active-tab cat-list">Kinolounge</li>
+                </ul>
+              </div>
+
+              <div class="carousel-container">
+                <div
+                  class="owl-carousel owl-theme active"
+                  id="kinolounge"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="end-content">
+            <div class="top-movies">
+              <h2>TOPMovies</h2>
+              <div class="top-movies-content"></div>
+            </div>
+            <div class="tall-ads">
+              <img src="./images/halloween.jpg" alt="" />
+            </div>
+            <div class="ads">
+              <img src="/images/ad1.avif" alt="" />
+              <img src="/images/ad2.avif" alt="" />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="movie-display">
-        <div class="main-display">
-          <div class="display-tab">
-            <ul class="nav-list">
-              <li data-target="nowShowing" class="active-tab cat-list">
-                Now Showing
-              </li>
-              <li data-target="advancedSale" class="cat-list">
-                Advanaced Sales
-              </li>
-              <li data-target="comingSoon" class="cat-list">Coming Soon</li>
-            </ul>
-          </div>
-
-          <div class="carousel-container">
-            <div class="owl-carousel owl-theme active" id="nowShowing"></div>
-            <div class="owl-carousel owl-theme" id="advancedSale"></div>
-            <div class="owl-carousel owl-theme" id="comingSoon"></div>
-          </div>
+      <div class="sidebar hidden">
+        <div class="menu-icon">
+          <i class="ri-close-fill"></i>
         </div>
 
-        <div class="secondary-display">
-          <div class="display-tab">
-            <ul class="nav-list">
-              <li class="active-tab cat-list">Promotions</li>
-            </ul>
-          </div>
-
-          <div class="carousel-container">
-            <div class="owl-carousel owl-theme active" id="promotions"></div>
-          </div>
+        <div class="shaw-items">
+          <div class="imax"><a href="">IMAX</a></div>
+          <div class="premier"><a href="">PREMIER</a></div>
+          <div class="lumiere"><a href="">LUMIER</a></div>
+          <div class="dreamers"><a href="">DREAMERS</a></div>
+          <div class="kino"><a href="">KINOLOUNGE</a></div>
         </div>
 
-        <div class="secondary-display">
-          <div class="display-tab">
-            <ul class="nav-list">
-              <li class="active-tab cat-list">Kinolounge</li>
-            </ul>
-          </div>
+        <div class="menu-options">
+          <ul>
+            <li><a href="">CHECK BOOKINGS</a></li>
+            <li><a href="">MOVIES</a></li>
+            <li><a href="">PROMOTIONS</a></li>
+            <li><a href="">MOVIE VOUCHERS</a></li>
+            <li><a href="">THEATRES</a></li>
+            <li><a href="">CORPORATE EVENTS</a></li>
+          </ul>
+        </div>
 
-          <div class="carousel-container">
-            <div class="owl-carousel owl-theme active" id="kinolounge"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="end-content">
-        <div class="top-movies">
-          <h2>TOPMovies</h2>
-          <div class="top-movies-content"></div>
-        </div>
-        <div class="tall-ads">
-          <img src="./images/halloween.jpg" alt="" />
-        </div>
-        <div class="ads">
-          <img src="/images/ad1.avif" alt="" />
-          <img src="/images/ad2.avif" alt="" />
+        <div class="sub-section">
+          <ul>
+            <li><a href="">SAFRA LOGIN</a></li>
+            <li><a href="">SEARCH </a></li>
+            <li><a href="">SUBSCRIBE</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -131,7 +183,6 @@
         </ul>
       </div>
       <div class="footer-content">
-        <div class="certs"></div>
         <div class="socials">
           <p>CONNECT WITH US</p>
           <div class="icons">
@@ -157,42 +208,11 @@
             <div class="payment"></div>
           </div>
         </div>
-        <p class="credits">SHAW WEBSITE REMAKE - MARTIN 2023</p>
+        <div class="credits">
+          <p>SHAW WEBSITE REMAKE - MARTIN 2023</p>
+        </div>
       </div>
     </footer>
-
-    <div class="sidebar hidden">
-      <div class="menu-icon">
-        <i class="ri-close-fill"></i>
-      </div>
-
-      <div class="shaw-items">
-        <div class="imax"><a href="">IMAX</a></div>
-        <div class="premier"><a href="">PREMIER</a></div>
-        <div class="lumiere"><a href="">LUMIER</a></div>
-        <div class="dreamers"><a href="">DREAMERS</a></div>
-        <div class="kino"><a href="">KINOLOUNGE</a></div>
-      </div>
-
-      <div class="menu-options">
-        <ul>
-          <li><a href="">CHECK BOOKINGS</a></li>
-          <li><a href="">MOVIES</a></li>
-          <li><a href="">PROMOTIONS</a></li>
-          <li><a href="">MOVIE VOUCHERS</a></li>
-          <li><a href="">THEATRES</a></li>
-          <li><a href="">CORPORATE EVENTS</a></li>
-        </ul>
-      </div>
-
-      <div class="sub-section">
-        <ul>
-          <li><a href="">SAFRA LOGIN</a></li>
-          <li><a href="">SEARCH </a></li>
-          <li><a href="">SUBSCRIBE</a></li>
-        </ul>
-      </div>
-    </div>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="jquery.js"></script>

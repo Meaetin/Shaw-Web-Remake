@@ -99,8 +99,9 @@ async function loadMovies(movieArray, catName) {
                 items: 3,
                 stagePadding: 50,
             },
-            1260: {
+            1024: {
                 items: 4,
+                stagePadding: 80,
             },
 
             1366: {
